@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h1>INSCRIPTION DES ELECTEURS</h1>
+        <label for="numéro">Num:</label>
+        <input type="numéro" name="numéro" id="numéro"><br>
+        <label for="nom"> Nom</label>
+        <input type="text" id="nom"><br>
+        <label for="prenom">prenom:</label>
+        <input type="text" name="prenom" id="prenom"><br>
+        <input type="radio" name="genre" id="garçon">Garçon <br>
+        <input type="radio" name="genre" id="fille">Fille
+        <label for="niveau">Niveau scolaire</label>
+        <select name="niveau" id="niveau">
+            <option value=""> 6ème</option>
+            <option value="" selected>7ème</option>
+            <option value="">8ème</option>
+            <option value="">9ème</option>
+        </select>
+        <input onclick="verifier()" value="Inscrire">
+        <input type="reset" value="Annuler">
+    </form>
+    <script>
+        function verifier(){
+                let num = document.getElementById("numéro").value;
+                if(num.length==4){
+                    alert("Données envoyés avec succès");
+                } else{
+                    alert("Veuillez entrez un numéro à 4 chiffres");
+                }
+            }
+            
+    </script>
+    <!--regex est une expression régulière qui sert à vérifier si un texre respecte un certain format*/
+    ex: /^[A-Za-z]+$/-->
+</body>
+</html>
